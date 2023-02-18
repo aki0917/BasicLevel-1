@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Progrative | Basic | Level 1-4</title>
+
+    <!-- google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontSize: {
+              xs: ".625rem", // 10px
+              sm: ".75rem", // 12px
+              base: "0.875rem", // 14px
+              lg: "1rem", // 16px
+              xl: "1.25rem", // 20px
+              "2xl": "1.5rem", // 24px
+              "3xl": "2.375rem", // 38px
+              "4xl": "2.75rem", // 44px
+              "5xl": "3rem", // 48px
+              "6xl": "3.5rem", // 56px
+            },
+            colors: {
+              black: "#3f3f3f",
+              black2: "#4d4d4d",
+              gray1: "#7e7e7e",
+              gray2: "#e1e1e1",
+              gray3: "#f8f8f8",
+              gray4: "#d9d9d9",
+              gray5: "#DBDBDB",
+              accent: "#2FA597",
+            },
+            screens: {
+              "2xl": "1440px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .btn-links {
+          @apply relative after:absolute after:content-[''] after:w-[4px] after:h-[4px] after:rounded-full after:bg-white after:top-1/2 after:-left-4 after:-translate-y-1/2 after:duration-300 after:opacity-0 hover:after:opacity-100;
+        }
+      }
+    </style>
+
+    <!-- JS 読み込み -->
+    <script defer src="./assets/js/index.js"></script>
+
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="">
+    <header class="header">
+      <div class="header__img">
+        <img src="./assets/images/header.svg" alt="ヘッダーロゴ">
+      </div>
+    </header>
+
+    <section class="top">
+      <div class="top-img">
+        <img src="./assets/images/main-background.png" style="min-width: 822px;" alt="">
+        <div class="top-item">
+          <div class="top-left">
+            <div class="top-left-item">
+               <img src="./assets/images/main_catch_white.svg" alt="">
+            </div>
+            <div class="top-center">
+              <div class="top-center-item">
+                <span>Progrative</span>
+              </div>
+            </div>
+            <button class="btn btn-register">無料ではじめる</button>
+          </div>
+          <div class="top-right">
+            <img src="./assets/images/mockup.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan">
+      <div class="container">
+        <h2 class="section-title">プラン</h2>
+        <div class="plan-items">
+          <div class="plan-item">
+            <div class="item-img">
+              <img src="./assets/images/plan01.png" alt="">
+            </div>
+            <h2 class="item-ttl">Basic</h2>
+            <div class="item-lead">
+              <p class="item-text">- 3人まで管理画面利用可能</p>
+              <p class="item-text">- 1サイトまで解析可能</p>
+              <p class="item-text">- リーチ回数測定</p>
+              <p class="item-text">- エンゲージメント率測定</p>
+              <p class="item-text">- インプレッション数測定</p>
+              <p class="item-text">- サイト遷移計測</p>
+            </div>
+            <button class="btn btn-register">無料ではじめる</button>
+            <!-- ここposition: absolute;を指定することで下にいった -->
+          </div>
+          <div class="plan-item">
+            <div class="item-img">
+              <img src="./assets/images/plan01.png" alt="">
+            </div>
+            <h2 class="item-ttl">Business</h2>
+            <div class="item-lead">
+              <p class="item-text">- 20人まで管理画面利用可能</p>
+              <p class="item-text">- 5サイトまで解析可能</p>
+              <div class="item-lead-1">
+                <p class="item-text">Basicプランの内容に加え</p>
+                <p class="item-text">- 各測定のタイマー機能</p>
+                <p class="item-text">- アラート機能</p>
+                <p class="item-text">- エクスポート機能</p>
+                <p class="item-text">- 測定ログを無制限に記録</p>
+              </div>
+              <button class="btn btn-register">問い合わせる</button>
+            </div>
+          </div>
+          <div class="plan-item">
+            <div class="item-img">
+              <img src="./assets/images/plan01.png" alt="">
+            </div>
+            <h2 class="item-ttl">Expert</h2>
+            <div class="item-lead">
+              <p class="item-text">- 100人まで管理画面利用可能</p>
+              <p class="item-text">- 無制限にサイト解析可能</p>
+              <div class="item-lead-1">
+                <p class="item-text">Businessプランの内容に加え</p>
+                <p class="item-text">- Twitter連携 & 分析</p>
+                <p class="item-text">- Instagram連携 & 分析</p>
+                <p class="item-text">- YouTube連携 & 分析</p>
+                <p class="item-text">※TikTokは今後対応予定</p>
+              </div>
+              <button class="btn btn-register">問い合わせる</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <div class="news-content">
+          <div class="news-ttl">
+            <h2 class="news-content-ttl">
+              <span>お知らせ</span>
+            </h2>
+          </div>
+          <ul class="news-list">
+            <li><span class="data">2025/04/01</span><span class="category">お知らせ</span><a href="">サイト解析オンライン座談会を開催しました。</a></li>
+            <li><span class="data">2025/04/01</span><span class="category">ブログ</span><a href="">サイト解析において85%の人が勘違いしている戦略・戦術</a></li>
+            <li><span class="data">2025/04/01</span><span class="category">ブログ</span><a href="">【Google元社員が語る】各SNSでのエンゲージメント傾向の違い</a></li>
+            <li><span class="data">2025/04/01</span><span class="category">お知らせ</span><a href="">導入企業さまが500社を突破</a></li>
+            <li><span class="data">2025/04/01</span><span class="category">お知らせ</span><a href="">サイト解析オンライン座談会を開催しました。</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="link">
+      <div class="container">
+        <div class="link-wrapper">
+          <div class="link-item on">
+            <div class="">
+              <a class="link-title"><span>Progrativeとは</span><span class="link-mk"></span></a>
+            </div>
+            <div class="link-content">
+              <a href="#">導入事例</a>
+              <a href="#">導入方法</a>
+              <a href="#">活用方法</a>
+              <a href="#">Google Analyticsとの違い</a>
+            </div>
+          </div>      
+
+          <div class="link-item">
+            <div class="">
+              <a class="link-title"><span>機能</span><span class="link-mk"></span></a>
+            </div>
+            <div class="link-content">
+              <a href="#">リーチ回数計測</a>
+              <a href="#">エンゲージメント率測定</a>
+              <a href="#">インプレッション率測定</a>
+              <a href="#">サイト遷移計測</a>
+              <a href="#">タイマー機能</a>
+              <a href="#">アラート機能</a>
+              <a href="#">エクスポート機能</a>
+            </div>
+          </div>
+          
+          <div class="link-item">
+            <div class="">
+              <a href="#" class="link-title"><span>サポート</span><span class="link-mk"></span></a>
+            </div>
+            <div class="link-content">
+              <a href="#">よくある質問</a>
+              <a href="#">ブログ</a>
+              <a href="#">ドキュメント</a>
+              <a href="#">動画講座</a>
+              <a href="#">資料請求</a>
+              <a href="#">お問い合わせ</a>
+            </div>
+          </div>
+
+          <div class="link-item">
+            <div class="">
+              <a href="#" class="link-title"><span>パートナーについて</span><span class="link-mk"></span></a>
+            </div>
+            <div class="link-content">
+              <a href="#">パートナーとは</a>
+              <a href="#">パートナー紹介</a>
+              <a href="#">よくある質問</a>
+              <a href="#">資料請求</a>
+              <a href="#">お問い合わせ</a>
+            </div>
+          </div>
+         
+          <div class="link-item">
+            <div class="">
+              <a href="#" class="link-title"><span>SNS</span><span class="link-mk"></span></a>
+            </div>
+            <div class="link-content">
+              <a href="#">Twitter</a>
+              <a href="#">YouTube</a>
+              <a href="#">TikTok</a>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+            </div>
+          </div>
+        </div>       
+
+        <hr>
+        <div class="link-contact">
+          <div class="link-contact-wrapper">
+            <div class="link-left">
+              <a href="#">株式会社〇〇</a>
+              <a href="#">利用規約</a>
+              <a href="#">特定商取引法に基づく表記</a>
+              <a href="#">プライバシーポリシー</a>
+            </div>
+          </div>
+            <div class="link-right">
+              <a href="#">©️〇〇 All Rights Reserved.</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <span>© Progrative by</span>
+        <span>TERRART 2022.</span>
+      </div>
+    </footer>
+  </body>
+</html>
